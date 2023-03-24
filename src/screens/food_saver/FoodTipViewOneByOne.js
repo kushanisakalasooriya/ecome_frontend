@@ -44,6 +44,8 @@ function FoodTipViewOneByOne({ route }) {
         setComment(value)
     }
 
+    
+
     const insertData = () => {
 
         var data = {
@@ -114,7 +116,9 @@ function FoodTipViewOneByOne({ route }) {
                     <Image style={styles.image} source={{ uri: image }} />
                 </View>
                 <View style={styles.infoContainer}>
-
+                <View style={styles.infoContainer}>
+                    <Text style={styles.description}> {category}</Text>
+                </View>
                     <Text style={styles.description}> {description}</Text>
 
                     {userId === userNo ?

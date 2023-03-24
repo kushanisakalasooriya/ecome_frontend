@@ -11,9 +11,9 @@ function AddFoodWasteReducingTips() {
     const navigation = useNavigation();
 
     const data = [
-        { label: 'Ways to Reduce Food Waste', value: '1' },
-        { label: 'Food Preservation Methods', value: '2' },
-        { label: 'Replanting Using Food Waste Plant', value: '3' },
+        { label: 'Ways to Reduce Food Waste', value: 'Ways to Reduce Food Waste' },
+        { label: 'Food Preservation Methods', value: 'Food Preservation Methods' },
+        { label: 'Replanting Using Food Waste Plant', value: 'Replanting Using Food Waste Plant' },
     ];
 
     const [title, setTitle] = useState('');
