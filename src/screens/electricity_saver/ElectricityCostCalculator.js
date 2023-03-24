@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   View,
@@ -12,9 +12,9 @@ import {
   Alert,
   Image,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import SelectList from 'react-native-dropdown-select-list';
-import { Dropdown } from 'react-native-element-dropdown';
+import {Dropdown} from 'react-native-element-dropdown';
 
 function ElectricityCostCalculator() {
   // const [wallets, setWallets] = useState([]);
@@ -29,12 +29,12 @@ function ElectricityCostCalculator() {
   const [seats, setSeats] = useState('');
   const [selected, setSelected] = React.useState('');
   const serviceData = [
-    { label: 'LECO', value: 'LECO' },
-    { label: 'CEB', value: 'CEB' },
+    {label: 'LECO', value: 'LECO'},
+    {label: 'CEB', value: 'CEB'},
   ];
   const customerData = [
-    { label: 'Domestic', value: 'domestic' },
-    { label: 'Industrial', value: 'industrial' },
+    {label: 'Domestic', value: 'domestic'},
+    {label: 'Industrial', value: 'industrial'},
   ];
   const [estimatedBill, setEstimatedBill] = useState(0);
 

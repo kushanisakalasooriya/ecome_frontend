@@ -3,8 +3,8 @@
 /* eslint-disable no-alert */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react-native/no-inline-styles */
-import { useNavigation } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
+import {useNavigation} from '@react-navigation/native';
+import React, {useEffect, useState} from 'react';
 import {
   StyleSheet,
   View,
@@ -16,9 +16,9 @@ import {
 } from 'react-native';
 import axios from 'react-native-axios';
 // import {useNavigation} from '@react-navigation/native';
-import { Dropdown } from 'react-native-element-dropdown';
+import {Dropdown} from 'react-native-element-dropdown';
 
-function UpdateBillInformation({ route }) {
+function UpdateBillInformation({route}) {
   const navigation = useNavigation();
   // const [wallets, setWallets] = useState([]);
   // const navigation = useNavigation();
@@ -26,25 +26,25 @@ function UpdateBillInformation({ route }) {
   const [month, setMonth] = useState('');
   const [units, setUnits] = useState('');
   const [entry, setEntry] = useState([]);
-  const { id } = route.params;
+  const {id} = route.params;
 
   useEffect(() => {
     getEntry();
   }, []);
 
   const data = [
-    { label: 'January', value: 'January' },
-    { label: 'February', value: 'February' },
-    { label: 'March', value: 'March' },
-    { label: 'April', value: 'April' },
-    { label: 'May', value: 'May' },
-    { label: 'June', value: 'June' },
-    { label: 'July', value: 'July' },
-    { label: 'August', value: 'August' },
-    { label: 'September', value: 'September' },
-    { label: 'October', value: 'October' },
-    { label: 'November', value: 'November' },
-    { label: 'December', value: 'December' },
+    {label: 'January', value: 'January'},
+    {label: 'February', value: 'February'},
+    {label: 'March', value: 'March'},
+    {label: 'April', value: 'April'},
+    {label: 'May', value: 'May'},
+    {label: 'June', value: 'June'},
+    {label: 'July', value: 'July'},
+    {label: 'August', value: 'August'},
+    {label: 'September', value: 'September'},
+    {label: 'October', value: 'October'},
+    {label: 'November', value: 'November'},
+    {label: 'December', value: 'December'},
   ];
 
   const updateBillInfo = () => {
