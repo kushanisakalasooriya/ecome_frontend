@@ -1,5 +1,5 @@
-import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native'
+import React, {useState} from 'react'
 import {
   Alert,
   Image,
@@ -8,14 +8,14 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-} from 'react-native';
-import axios from 'react-native-axios';
-import {Dropdown} from 'react-native-element-dropdown';
-import {ScrollView} from 'react-native-gesture-handler';
+} from 'react-native'
+import axios from 'react-native-axios'
+import {Dropdown} from 'react-native-element-dropdown'
+import {ScrollView} from 'react-native-gesture-handler'
 
-function AddFoodWasteReducingTips() {
+function AddFoodWasteReducingTips () {
   // const [wallets, setWallets] = useState([]);
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   const data = [
     {label: 'Ways to Reduce Food Waste', value: 'Ways to Reduce Food Waste'},
@@ -24,47 +24,47 @@ function AddFoodWasteReducingTips() {
       label: 'Replanting Using Food Waste Plant',
       value: 'Replanting Using Food Waste Plant',
     },
-  ];
-
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [video, setVideo] = useState('');
-  const [image, setImage] = useState('');
-  const [category, setCategory] = useState(null);
-  const [userId, setUserId] = useState('003');
+  ]
+  
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [video, setVideo] = useState('')
+  const [image, setImage] = useState('')
+  const [category, setCategory] = useState(null)
+  const [userId, setUserId] = useState('003')
 
   const onChangeTextTitle = value => {
-    setTitle(value);
-  };
+    setTitle(value)
+  }
   const onChangeTextDescription = value => {
-    setDescription(value);
-  };
+    setDescription(value)
+  }
   const onChangeTextVideo = value => {
-    setVideo(value);
-  };
+    setVideo(value)
+  }
   const onChangeTextImage = value => {
-    setImage(value);
-  };
+    setImage(value)
+  }
   const onChangeTextCategory = value => {
-    setCategory(value);
-  };
+    setCategory(value)
+  }
 
   const insertData = () => {
     if (title == '') {
-      alert('Please Enter Title');
-      return false;
+      alert('Please Enter Title')
+      return false
     } else if (category == null) {
-      alert('Please Select the Category');
-      return false;
+      alert('Please Select the Category')
+      return false
     } else if (description == '') {
-      alert('Please Enter Description');
-      return false;
+      alert('Please Enter Description')
+      return false
     } else if (video == '') {
-      alert('Please Enter Video URL');
-      return false;
+      alert('Please Enter Video URL')
+      return false
     } else if (image == '') {
-      alert('Please enter Image URL');
-      return false;
+      alert('Please enter Image URL')
+      return false
     } else {
       var data = {
         title: title,
@@ -73,7 +73,7 @@ function AddFoodWasteReducingTips() {
         image: image,
         video: video,
         userId: userId,
-      };
+      }
       axios({
         url: 'http://10.0.2.2:5050/FoodSaver/add',
         method: 'POST',
@@ -82,10 +82,10 @@ function AddFoodWasteReducingTips() {
         // setList(response.data)
         Alert.alert('Done', 'Successfully Inserted!', [
           {text: 'OK', onPress: () => navigation.navigate('FoodSavingTips')},
-        ]);
-      });
+        ])
+      })
     }
-  };
+  }
 
   return (
     <View style={styles.MainContainer}>
@@ -95,7 +95,8 @@ function AddFoodWasteReducingTips() {
           fontWeight: 'bold',
           color: 'black',
           marginTop: -20,
-        }}>
+        }}
+      >
         Add Food Waste Reducing Tips
       </Text>
 
@@ -104,7 +105,8 @@ function AddFoodWasteReducingTips() {
           justifyContent: 'center',
           marginLeft: 20,
           marginRight: 20,
-        }}>
+        }}
+      >
         <Image
           source={require('../../assets/food_waste_saver/food2.png')}
           style={styles.img}
@@ -115,8 +117,8 @@ function AddFoodWasteReducingTips() {
           <TextInput
             onChangeText={onChangeTextTitle}
             value={title}
-            name="title"
-            underlineColorAndroid="transparent"
+            name='title'
+            underlineColorAndroid='transparent'
             style={styles.SmallTextInputStyleClass}
           />
         </View>
@@ -132,12 +134,12 @@ function AddFoodWasteReducingTips() {
             data={data}
             search
             maxHeight={300}
-            labelField="label"
-            valueField="value"
-            searchPlaceholder="Search..."
+            labelField='label'
+            valueField='value'
+            searchPlaceholder='Search...'
             value={category}
             onChange={item => {
-              setCategory(item.value);
+              setCategory(item.value)
             }}
           />
         </View>
@@ -146,9 +148,9 @@ function AddFoodWasteReducingTips() {
           <Text style={styles.lableClass3}>description : </Text>
           <TextInput
             onChangeText={onChangeTextDescription}
-            underlineColorAndroid="transparent"
+            underlineColorAndroid='transparent'
             style={styles.SmallTextInputStyleClass3}
-            name="description"
+            name='description'
             value={description}
             numberOfLines={6}
             multiline={true}
@@ -159,9 +161,9 @@ function AddFoodWasteReducingTips() {
           <Text style={styles.lableClass4}> Video URL :</Text>
           <TextInput
             onChangeText={onChangeTextVideo}
-            underlineColorAndroid="transparent"
+            underlineColorAndroid='transparent'
             style={styles.SmallTextInputStyleClass4}
-            name="video"
+            name='video'
             value={video}
           />
         </View>
@@ -170,9 +172,9 @@ function AddFoodWasteReducingTips() {
           <Text style={styles.lableClass5}> Image URL :</Text>
           <TextInput
             onChangeText={onChangeTextImage}
-            underlineColorAndroid="transparent"
+            underlineColorAndroid='transparent'
             style={styles.SmallTextInputStyleClass5}
-            name="image"
+            name='image'
             value={image}
           />
         </View>
@@ -184,7 +186,8 @@ function AddFoodWasteReducingTips() {
             // borderBottomColor: '#ffc107',
             // borderBottomWidth: StyleSheet.hairlineWidth,
             marginTop: 260,
-          }}></View>
+          }}
+        ></View>
 
         <View style={styles.fixToText}>
           <TouchableOpacity style={styles.CalBtn} onPress={insertData}>
@@ -192,15 +195,16 @@ function AddFoodWasteReducingTips() {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.CalBtn1}
-            onPress={() => navigation.navigate('FoodSaverDashboard')}>
+            onPress={() => navigation.navigate('FoodSaverDashboard')}
+          >
             <Text style={styles.CalBtnText}>CANCEL</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
-  );
+  )
 }
-export default AddFoodWasteReducingTips;
+export default AddFoodWasteReducingTips
 
 const styles = StyleSheet.create({
   dropdownList: {
@@ -424,4 +428,4 @@ const styles = StyleSheet.create({
     height: 40,
     fontSize: 16,
   },
-});
+})
