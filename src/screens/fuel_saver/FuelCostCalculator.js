@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 function FuelCostCalculator() {
-  // const [wallets, setWallets] = useState([]);
   const navigation = useNavigation();
 
   const [distance, setDistance] = useState('');

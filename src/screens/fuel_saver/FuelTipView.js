@@ -208,9 +208,6 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   fixToText: {
-    // marginTop: 20,
-    // alignSelf: "flex-end",
     flexDirection: 'row',
-    // justifyContent: 'space-between',
   },
 });
