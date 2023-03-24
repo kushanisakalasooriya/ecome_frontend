@@ -34,7 +34,7 @@ function WaterSaverDashBoard() {
             </Text>
             <Image source={require('../../assets/water_saver/water_icon.png')} style={styles.img} />
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips")}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips", { category: null })}>
                 <Text style={styles.text}>Latest Ideas</Text>
             </TouchableOpacity>
 

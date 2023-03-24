@@ -60,7 +60,7 @@ function AddNewTip() {
                     "Done",
                     "Successfully Inserted!",
                     [
-                        { text: "OK", onPress: () => navigation.navigate("WaterSavingTips") }
+                        { text: "OK", onPress: () => navigation.navigate("WaterSaverDashBoard") }
                     ]
                 );
             })
@@ -71,8 +71,9 @@ function AddNewTip() {
     }
 
     const dataa = [
+        { label: 'Domestic', value: 'Industrial' },
+        { label: 'Medium Scale', value: 'Medium Scale' },
         { label: 'Industrial', value: 'Industrial' },
-        { label: 'Household', value: 'Household' },
     ];
 
     return (
