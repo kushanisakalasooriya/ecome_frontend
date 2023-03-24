@@ -1,4 +1,4 @@
-package com.passengerapp.newarchitecture;
+package com.EcoMe.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.passengerapp.BuildConfig;
-import com.passengerapp.newarchitecture.components.MainComponentsRegistry;
-import com.passengerapp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.EcoMe.BuildConfig;
+import com.EcoMe.newarchitecture.components.MainComponentsRegistry;
+import com.EcoMe.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
