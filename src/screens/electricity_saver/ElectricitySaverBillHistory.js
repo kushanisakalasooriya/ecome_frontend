@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   View,
@@ -10,7 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import axios from 'react-native-axios';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 function ElectricitySaverBillHistory() {
   const [update, setUpdate] = useState('');
@@ -81,9 +81,9 @@ function ElectricitySaverBillHistory() {
                   color: '#FA8072',
                   textAlign: 'left',
                 }}>
-                {entry.month} - 2022
+                {entry.month} - 2023
               </Text>
-              <View style={{ flexDirection: 'row', marginLeft: 'auto' }}>
+              <View style={{flexDirection: 'row', marginLeft: 'auto'}}>
                 <Text
                   style={{
                     fontSize: 16,
