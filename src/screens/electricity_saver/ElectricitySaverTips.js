@@ -1,9 +1,10 @@
+/* eslint-disable no-dupe-keys */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Text, Image } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {StyleSheet, View, TouchableOpacity, Text, Image} from 'react-native';
 import axios from 'react-native-axios';
-import { useNavigation } from '@react-navigation/native';
-import { ScrollView } from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
+import {ScrollView} from 'react-native-gesture-handler';
 
 function ElectricitySaverTips() {
   const [wallets, setWallets] = useState([]);
@@ -147,7 +148,9 @@ function ElectricitySaverTips() {
             borderBottomWidth: StyleSheet.hairlineWidth,
           }}
         />
-        <Text style={styles.titleTextTop}>8. SET CLEAR ENERGY SAVING GOALS </Text>
+        <Text style={styles.titleTextTop}>
+          8. SET CLEAR ENERGY SAVING GOALS{' '}
+        </Text>
         <Text style={styles.text}>
           After you have an accurate assessment of your current energy use, set
           clear and attainable energy-saving goals for your business. Identify
@@ -206,6 +209,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     fontFamily: 'Roboto Extrabold',
-    fontWeight: "700",
+    fontWeight: '700',
   },
 });
