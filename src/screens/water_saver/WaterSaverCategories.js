@@ -34,15 +34,15 @@ function WaterSaverCategories() {
             </Text>
             <Image source={require('../../assets/water_saver/categories.png')} style={styles.img} />
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips")}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips", { category: "Domestic" })}>
                 <Text style={styles.text}>DOMESTIC IDEAS</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips")}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips", { category: "Medium Scale"})}>
                 <Text style={styles.text}> MEDUIM SCALE IDEAS</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips")}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips", {category: "Industrial"})}>
                 <Text style={styles.text}> INDUSTRIAL IDEAS</Text>
             </TouchableOpacity>
 

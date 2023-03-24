@@ -58,7 +58,7 @@ function WaterTipView({ route }) {
     }
 
     nav = (idd) => {
-        navigation.navigate("WaterSaverComments", { id: idd })
+        navigation.navigate("WaterTipView", { id: idd })
     }
 
     return (

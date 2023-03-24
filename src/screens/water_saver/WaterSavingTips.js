@@ -3,14 +3,24 @@ import { StyleSheet, View, TouchableOpacity, Text, Image, ScrollView } from "rea
 import axios from 'react-native-axios';
 import { useNavigation } from '@react-navigation/native';
 
-function FuelSavingTips() {
+function FuelSavingTips({route}) {
 
     const [tips, setTips] = useState([]);
     const navigation = useNavigation();
+    const { category } = route.params;
+
+    const getTipsCategory = async () => {
+        try {
+            const response = await axios.get(`http://10.0.2.2:5050/WaterTips/category/` + category) 
+            setTips(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     const getFuelTips = async () => {
         try {
-            const response = await axios.get(`http://10.0.2.2:5050/WaterTips/`);
+            const response = await axios.get(`http://10.0.2.2:5050/WaterTips/`) 
             setTips(response.data);
         } catch (error) {
             console.log(error);
@@ -18,7 +28,7 @@ function FuelSavingTips() {
     };
 
     useEffect(() => {
-        getFuelTips();
+        category ? getTipsCategory() : getFuelTips()
     }, [])
 
     return (
@@ -26,19 +36,16 @@ function FuelSavingTips() {
         <View style={styles.MainContainer}>
 
             <Text style={{
-                fontSize: 25,
+                fontSize: 24,
                 fontWeight: 'bold',
                 color: 'black',
                 textAlign: 'center',
                 marginBottom: 25
             }}>
-                Water Saving Tips
+                {category} Water Saving Tips
             </Text>
             <ScrollView
                 contentContainerStyle={{
-                    // justifyContent: 'center',
-                    // marginLeft: 20,
-                    // marginRight: 20,
                 }}>
 
                 {tips.map(tip => (
