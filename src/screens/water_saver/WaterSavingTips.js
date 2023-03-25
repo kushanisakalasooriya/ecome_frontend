@@ -3,7 +3,7 @@ import { StyleSheet, View, TouchableOpacity, Text, Image, ScrollView } from "rea
 import axios from 'react-native-axios';
 import { useNavigation } from '@react-navigation/native';
 
-function FuelSavingTips({route}) {
+function WaterSavingTips({route}) {
 
     const [tips, setTips] = useState([]);
     const navigation = useNavigation();
@@ -74,7 +74,7 @@ function FuelSavingTips({route}) {
 
     );
 }
-export default FuelSavingTips
+export default WaterSavingTips
 
 const styles = StyleSheet.create({
     tch: {
