@@ -58,7 +58,9 @@ function WaterTipView({ route }) {
     }
 
     nav = (idd) => {
-        navigation.navigate("WaterTipView", { id: idd })
+        navigation.navigate("WaterTipView", { id: idd });
+        handleModal();
+        setComment('');
     }
 
     return (

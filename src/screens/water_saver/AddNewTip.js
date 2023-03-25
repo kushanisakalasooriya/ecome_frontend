@@ -71,7 +71,7 @@ function AddNewTip() {
     }
 
     const dataa = [
-        { label: 'Domestic', value: 'Industrial' },
+        { label: 'Domestic', value: 'Domestic' },
         { label: 'Medium Scale', value: 'Medium Scale' },
         { label: 'Industrial', value: 'Industrial' },
     ];
