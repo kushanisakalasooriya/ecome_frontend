@@ -39,7 +39,7 @@ function WaterSaverCategories() {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips", { category: "Medium Scale"})}>
-                <Text style={styles.text}> MEDUIM SCALE IDEAS</Text>
+                <Text style={styles.text}> MEDIUM SCALE IDEAS</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("WaterSavingTips", {category: "Industrial"})}>
